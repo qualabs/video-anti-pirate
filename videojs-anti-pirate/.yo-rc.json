@@ -1,0 +1,15 @@
+{
+  "generator-videojs-plugin": {
+    "scope": "",
+    "name": "antiPirate",
+    "description": "",
+    "author": "Qualabs",
+    "license": "mit",
+    "pluginType": "advanced",
+    "css": false,
+    "docs": false,
+    "lang": false,
+    "precommit": true,
+    "prepush": false
+  }
+}

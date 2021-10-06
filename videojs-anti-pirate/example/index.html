@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>videojs-anti-pirate Demo</title>
+  <link href="../node_modules/video.js/dist/video-js.css" rel="stylesheet" />  
+  <style>
+    input {
+      width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <video id="player" class="video-js vjs-default-skin" controls></video>
+  
+  <div style>
+    <div>URL: <input id='url'></input></div>
+    <div>Token: <input id='token'></input></div>
+    <div>Server: <input id='server'></input></div>
+    <div><button id='setsrc'>Play!</button></div>
+  </div>
+  
+  <script src="../node_modules/video.js/dist/video.min.js"></script>
+  <script src="../dist/videojs-anti-pirate.dist.js"></script>
+  <script>
+    (function(window, videojs) {
+      
+      // Init player
+      var examplePlayer = window.examplePlayer = videojs('player');      
+      /*
+      Example
+      examplePlayer.antiPirate().src({
+        src: 'https://url/index.mpd',
+        server: 'https://your/license/server',
+        token: 'JWT'
+      })*/
+
+      document.getElementById('setsrc').addEventListener("click", function() {
+        examplePlayer.antiPirate().src({
+          src: document.getElementById('url').value,
+          token: document.getElementById('token').value,
+          server: document.getElementById('server').value
+        }
+      )
+
+      });
+    }(window, window.videojs));
+  </script>
+</body>
+</html>

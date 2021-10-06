@@ -1,0 +1,93 @@
+.teclado {
+	display: grid;
+	justify-content: center;
+	gap: 5px;
+	grid-template-columns: repeat(4, minmax(40px, 1fr));
+	grid-template-rows: repeat(4, 1fr);
+}
+.teclado .color-cont {
+	height: 75px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+}
+.color-seq {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border: 1px solid black;
+}
+.color-seq.cross {
+  background: linear-gradient(45deg, transparent 40%, #f00 51%, transparent 60%) top,
+  linear-gradient(-45deg, transparent 40%, #f00 51%, transparent 60%) bottom;
+}
+.color {
+	width: 100%;
+	height: 70%;
+	border-radius: 3px;
+}
+.color.red {
+	background-color: #ff0000;
+	border: 1px solid black;
+}
+.color.blue {
+	background-color: #0000ff;
+	border: 1px solid black;
+}
+.color.green {
+	background-color: #00ff00;
+	border: 1px solid black;
+}
+.color.white {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+.color.black {
+	background-color: #000000;
+	border: 1px solid black;
+}
+.color.cyan {
+	background-color: #00ffff;
+	border: 1px solid black;
+}
+.color.magenta {
+	background-color: #ff00ff;
+	border: 1px solid black;
+}
+.color.yellow {
+	background-color: #ffff00;
+	border: 1px solid black;
+}
+.color.black-red {
+	background: linear-gradient(45deg, #000 49%, #f00 51%);
+	border: 1px solid black;
+}
+.color.black-magenta {
+	background: linear-gradient(45deg, #f0f 49%, #000 51%);
+	border: 1px solid black;
+}
+.color.black-green {
+	background: linear-gradient(45deg, #000 49%, #0f0 51%);
+	border: 1px solid black;
+}
+.color.black-cyan {
+	background: linear-gradient(45deg, #0ff 49%, #000 51%);
+	border: 1px solid black;
+}
+.color.white-red {
+	background: linear-gradient(45deg, #fff 49%, #f00 51%);
+	border: 1px solid black;
+}
+.color.white-magenta {
+	background: linear-gradient(45deg, #f0f 49%, #fff 51%);
+	border: 1px solid black;
+}
+.color.white-green {
+	background: linear-gradient(45deg, #fff 49%, #0f0 51%);
+	border: 1px solid black;
+}
+.color.white-cyan {
+	background: linear-gradient(45deg, #0ff 49%, #fff 51%);
+	border: 1px solid black;
+}

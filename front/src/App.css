@@ -1,0 +1,134 @@
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 90px;
+	height: 51px;
+	margin: 0 !important;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 39px;
+	width: 39px;
+	left: 6px;
+	bottom: 6px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #007bff;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #007bff;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(39px);
+	-ms-transform: translateX(39px);
+	transform: translateX(39px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 51px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.password-input {
+	position: relative;
+}
+
+.password-ok {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
+.up-chevron {
+	line-height: 1;
+	transition: transform 0.4s ease-in-out;
+	transform: rotate(270deg);
+}
+
+.v-divider {
+	border-left: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.pl-125 {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+input[type='checkbox'].toggle {
+	display: none;
+}
+.card-header h4 {
+	margin: 0;
+}
+
+.collapsible-content {
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out;
+}
+.toggle:checked + .card-header + .collapsible-content {
+	max-height: 2500px;
+}
+
+.toggle:checked + .card-header .up-chevron {
+	transform: rotate(90deg);
+}
+
+.target {
+	font-size: 26px;
+	vertical-align: middle;
+	line-height: 0;
+}
+
+::selection {
+	background-color: #333;
+	color: #fff;
+}
+
+.alert-cont {
+	z-index: 99;
+	position: fixed;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+}
